@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>请升级您的浏览器版本</title>
+</head>
+<body>
+<style>
+    body {
+        font: 12px/22px "微软雅黑", "黑体", Arial, "宋体";
+        color: #555555;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+    .header{height:80px;margin: 30px auto 0 auto;width: 1024px;}
+    .header a{display: block;float: left}
+    .header a img{border: none;margin-right: 20px;}
+    .header h5{line-height: 100px;color: #333}
+    .container_box{border:1px solid #d9dadc;background-color:#fff; }
+    .container_bd{ padding: 0px 150px;}
+    .page_msg{ padding: 30px 0 10px;}
+    .page_msg.mini .inner{ padding: 9px 20px;}
+    .msg_icon_wrp{ margin-right: 6px; margin-top: 5px; float: left; font-size: 0;}
+    .page_msg .msg_content{overflow:hidden;*zoom:1;}
+    .page_msg p{font-size:16px; color: #222;}
+    .browser_list{ padding: 40px; text-align: center;}
+    .browser_item{ display: inline-block; margin: 0 15px; color:#459ae9;}
+    .browser_item .icon_browser{ width: 110px; height: 110px; vertical-align: middle; display: inline-block; background: url(home_img/brower.png) 0 0 transparent;}
+    .browser_name{ font-weight: 400; margin-top: 26px; display: block;}
+    .browser_item.qqbrowser .icon_browser{ background-position: 0 -228px;}
+    .browser_item.sogou_browser .icon_browser{ background-position: 0 -456px;}
+    .browser_item:hover .icon_browser{ background-position: 0 -114px;}
+    .browser_item.qqbrowser:hover .icon_browser{ background-position: 0 -342px;}
+    .browser_item.sogou_browser:hover .icon_browser{ background-position: 0 -570px;}
+    .browser_item.browser360 .icon_browser{ background-position: 0 -684px;}
+    .browser_item.browser360:hover .icon_browser{ background-position: 0 -798px;}
+    .browser_tips{ color: #8d8d8d; padding-bottom: 40px;}
+    .browser_tips p{ margin: 1em 0;}
+    .browser_tips li{ margin: 1em 0;}
+    .browser_tips img{ vertical-align:middle;}
+</style>
+<div class="header">
+    <div class="header-logo">
+        <a title="{$Think.config.NAME}" href="{:url('Index/index')}"><img src="home_img/icon/logo.png" /></a>
+        <h5>{$systeminfo.sys_title2}</h5>
+    </div>
+</div>
+
+
+    <div class="container_box">
+        <div class="container_bd">
+            <div class="page_msg mini default">
+                <div class="inner"> <span class="msg_icon_wrp"><i class="icon_msg_mini warn"></i></span>
+                    <div class="msg_content">
+                        <p>新版 青春博客 系统需要使用基于webkit内核的新版浏览器，请安装基于webkit内核的浏览器访问。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="browser_list">
+                <a class="browser_item chrome" href="http://xiazai.sogou.com/detail/34/0/6262355089742005676.html?uID=04583CB73B70900A0000000057318502&amp;w=2295" target="_blank"> <i class="icon_browser"></i> <strong class="browser_name">Chrome</strong> </a>
+                <a class="browser_item browser360" href="http://chrome.360.cn/" target="_blank"> <i class="icon_browser"></i> <strong class="browser_name">360极速浏览器</strong> </a>
+                <a class="browser_item qqbrowser" href="http://browser.qq.com/" target="_blank"> <i class="icon_browser"></i> <strong class="browser_name">QQ浏览器</strong> </a>
+                <a class="browser_item sogou_browser" href="http://ie.sogou.com/" target="_blank"> <i class="icon_browser"></i> <strong class="browser_name">搜狗浏览器</strong> </a>
+            </div>
+            <div class="browser_tips">
+                <p> 如果你正在使用的是双核浏览器，比如QQ浏览器、搜狗浏览器、猎豹浏览器、世界之窗浏览器、傲游浏览器、360浏览器等，可以使用浏览器的极速模式来继续访问 青春博客。
+                    <a id="access" href="javascript:void(0);">查看详情</a>
+                </p>
+            </div>
+            <div class="browser_tips" id="tips" style="display: none;">
+                <ul>
+                    <li> 方法一，点击浏览器顶部地址栏右侧的浏览器兼容模式图标，
+                        <img alt="" src="home_img/ie.png">或<img alt="" src="home_img/bro.png">，切换到极速模式<br>
+                        <p class="tc">
+                            <img alt="" src="home_img/pic_browser_mode_ie_12db5d9.png"> </p>
+                    </li>
+                    <li> 方法二，在当前页面中，点击鼠标右键，选择“切换到极速模式”<br>
+                        <p class="tc"> <img alt="" src="home_img/pic_browser_mode_ie_22db5d9.jpg"> </p>
+                    </li>
+                    <li> 方法三，在浏览器菜单栏中选择工具选项，打开“兼容性视图设置”，把设置框底部的“在兼容性视图显示”三个勾选框去掉<br>
+                        <p class="tc"> <img alt="" src="home_img/pic_browser_mode_ie_42dfebd.png"> </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            (function() {
+                var tips = document.getElementById("tips");
+                var access = document.getElementById("access");
+                var isShow = false;
+                access.onclick = function() {
+                    if(!isShow) {
+                        tips.style.display = "block";
+                        isShow = true;
+                    } else {
+                        tips.style.display = "none";
+                        isShow = false;
+                    }
+                }
+            })();
+        </script>
+    </div>
+</body>
+</html>

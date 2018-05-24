@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>工具箱 - {$systeminfo.sys_title}</title>
+    <meta name="keywords" content="{$systeminfo.sys_keyword}" />
+    <meta name="description" content="{$systeminfo.sys_remark}" />
+    <meta name="version" content="v {$systeminfo.sys_version}" />
+    <meta name="author" content="{$Think.config.auth.author}"/>
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if lt IE 9]>
+    <script>window.location.href= location.href + '/Error/upgrade-your-browser';</script>
+    <![endif]-->
+    <link rel="stylesheet" href="home_css/bootstrap.css?v={$systeminfo.sys_version}" />
+    <link rel="stylesheet" href="home_css/my.css?v={$systeminfo.sys_version}" />
+</head>
+<body>
+<div class="tool_nav container hidden-xs">
+    <p class="tooltitle"><a class="btn-xs btn-danger toolback" href="{:url('index/index')}">返回博客</a></p>
+    <div class="col-md-3 text-center">
+        <div class="thumbnail clearfix">
+            <a href="{:url('Tool/info',['str'=>'md5'])}"><div class="col-md-12" style="padding: 15px;border-bottom: 1px solid #D7D7D7;">Md5加密</div></a>
+            <div class="col-md-12" style="padding: 10px;font-size: 12px">
+                常用的md5文件16、32位大小写加密
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 text-center">
+        <div class="thumbnail clearfix">
+            <a href="{:url('Tool/info',['str'=>'time'])}"><div class="col-md-12" style="padding: 15px;border-bottom: 1px solid #D7D7D7;">时间戳转换</div></a>
+            <div class="col-md-12" style="padding: 10px;font-size: 12px">
+                PHP下时间戳的相互转换
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 text-center">
+        <div class="thumbnail clearfix">
+            <a href="{:url('Tool/info',['str'=>'json'])}"><div class="col-md-12" style="padding: 15px;border-bottom: 1px solid #D7D7D7;">Json格式化</div></a>
+            <div class="col-md-12" style="padding: 10px;font-size: 12px">
+                API开发中常用的Json数据处理
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-md-3 text-center">
+        <div class="thumbnail clearfix">
+            <a href="http://www.loveteemo.com/phpcode/"><div class="col-md-12" style="padding: 15px;border-bottom: 1px solid #D7D7D7;">在线运行PHP</div></a>
+            <div class="col-md-12" style="padding: 10px;font-size: 12px">
+                简单的代码不用开启环境去调试
+            </div>
+        </div>
+    </div> -->
+</div>
+<p class="visible-xs tool_msg">亲，此页面不支持手机访问</p>
+</body>
+</html>

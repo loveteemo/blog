@@ -1,0 +1,218 @@
+{extend name="layout"}
+{block name="title"}
+<div id="content-header">
+    <h1>仪表盘主页</h1>
+</div>
+<div id="breadcrumb">
+    <a href="{:url('Admin/Index/index')}" title="回到首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+    <a href="#" class="current">仪表盘</a>
+</div>
+{/block}
+{block name="content"}
+<div class="row-fluid">
+    <div class="widget-box span12">
+        <div class="widget-title">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#tab1">常规设置</a></li>
+                <li><a data-toggle="tab" href="#tab2">显示设置</a></li>
+                <li><a data-toggle="tab" href="#tab3">邮件设置</a></li>
+            </ul>
+        </div>
+        <div class="widget-content tab-content">
+            <div id="tab1" class="tab-pane active">
+                <div class="widget-box">
+                    <div class="widget-content nopadding ">
+                        <form class="form-horizontal" >
+                            <div class="control-group">
+                                <label class="control-label">网站标题</label>
+                                <div class="controls">
+                                    <input type="text" name="sys_title" placeholder="请输入Blog名称" value="{$systeminfo.sys_title}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">次级标题</label>
+                                <div class="controls">
+                                    <input type="text" name="sys_title2" placeholder="请输入Logo旁的二级标题" value="{$systeminfo.sys_title2}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">关键词</label>
+                                <div class="controls">
+                                    <input type="text" name="sys_keyword" placeholder="请输入网站关键词，SEO用" value="{$systeminfo.sys_keyword}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">注册时间</label>
+                                <div class="controls">
+                                    <input type="text" name="sys_createtime" id="choosetime" class="laydate-icon" placeholder="请输入注册时间" value="{$systeminfo.sys_createtime}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">备案号</label>
+                                <div class="controls">
+                                    <input type="text" name="sys_icp" placeholder="请输入ICP备案号" value="{$systeminfo.sys_icp}" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">访问总量</label>
+                                <div class="controls">
+                                    <input type="text" name="sys_hits" placeholder="请输入网站访问量" value="{$systeminfo.sys_hits}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">版权代码</label>
+                                <div class="controls">
+                                    <input type="text" name="sys_copy" placeholder="请输入网站版权代码" value="{$systeminfo.sys_copy}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">站点描述</label>
+                                <div class="controls">
+                                    <textarea name="sys_remark" placeholder="请输入网站描述,SEO用">{$systeminfo.sys_remark}</textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">统计代码</label>
+                                <div class="controls">
+                                    <textarea name="sys_footer" placeholder="请输入网站统计代码">{$systeminfo.sys_footer}</textarea>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary sysform" data-url="{:url('Admin/System/basics')}">修改</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tab-pane ">
+                <div class="widget-box">
+                    <div class="widget-content nopadding ">
+                        <form class="form-horizontal" >
+                            <div class="control-group">
+                                <label class="control-label">QQ交流群</label>
+                                <div class="controls">
+                                    <input type="text" name="qqgroup" placeholder="请输入QQ交流群" value="{$Think.config.auth.qqgroup}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">网站口碑</label>
+                                <div class="controls">
+                                    <input type="text" name="baiduurl" placeholder="请输入网站口碑网址" value="{$Think.config.auth.baiduurl}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">QQ进群连接</label>
+                                <div class="controls">
+                                    <input type="text" name="qqjoin" placeholder="请输入QQ进群连接" value="{$Think.config.auth.qqjoin}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">GIT主页</label>
+                                <div class="controls">
+                                    <input type="text" name="githuburl" placeholder="请输入注册时间" value="{$Think.config.auth.githuburl}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">微博主页</label>
+                                <div class="controls">
+                                    <input type="text" name="weibourl" placeholder="请输入微博主页" value="{$Think.config.auth.weibourl}" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">程序名称</label>
+                                <div class="controls">
+                                    <input type="text" name="blogname" placeholder="请输入程序名称,用于底部显示" value="{$Think.config.auth.blogname}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">程序框架</label>
+                                <div class="controls">
+                                    <input type="text" name="framework" placeholder="请输入程序框架,用于底部显示" value="{$Think.config.auth.framework}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">程序作者</label>
+                                <div class="controls">
+                                    <input type="text" name="author" placeholder="请输入程序作者,用于底部显示" value="{$Think.config.auth.author}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">文档地址</label>
+                                <div class="controls">
+                                    <input type="text" name="docurl" placeholder="请输入程序文章,用于底部显示" value="{$Think.config.auth.docurl}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">管理员名称</label>
+                                <div class="controls">
+                                    <input type="text" name="adminname" placeholder="请输入管理员名称,用于回复显示" value="{$Think.config.auth.adminname}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">发布文章默认点击</label>
+                                <div class="controls">
+                                    <input type="text" name="dehits" placeholder="请输入发布文章默认点击" value="{$Think.config.auth.dehits}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">管理员名称</label>
+                                <div class="controls">
+                                    <input type="text" name="adminname" placeholder="请输入管理员名称,用于回复显示" value="{$Think.config.auth.adminname}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">评论审核</label>
+                                <div class="controls">
+                                    <div class="radio">
+                                        <input type="radio" name="comview" id="radio_1" value="1" {eq name="Think.config.auth.comview" value="1"} checked {/eq} /><label for="radio_1">不需要审核</label>&nbsp;
+                                        <input type="radio" name="comview" id="radio_2" value="0" {eq name="Think.config.auth.comview" value="0"} checked {/eq} /><label for="radio_2">需要审核</label>&nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary sysform" data-url="{:url('Admin/System/view')}">修改</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="tab-pane ">
+                <div class="widget-box">
+                    <div class="widget-content nopadding ">
+                        <form class="form-horizontal" >
+                            <div class="control-group">
+                                <label class="control-label">QQ登陆AppID</label>
+                                <div class="controls">
+                                    <input type="text" name="appid" placeholder="请输入QQ登陆AppID" value="{$qq_inc.appid}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">QQ登陆AppKey</label>
+                                <div class="controls">
+                                    <input type="text" name="appkey" placeholder="请输入QQ登陆AppKey" value="{$qq_inc.appkey}"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">QQ登陆回调地址</label>
+                                <div class="controls">
+                                    <input type="text" name="callback" placeholder="请输入QQ登陆回调地址" value="{$qq_inc.callback}"/>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary sysform" data-url="{:url('Admin/System/sdk')}">修改</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // === 创建时间选择 === //
+    laydate({
+        elem: '#choosetime',
+        event: 'focus'
+    });
+</script>
+{/block}

@@ -1,0 +1,55 @@
+{extend name="layout" /}
+{block name="left"}
+    <div class="alert alert-success alert-dismissible" role="alert">
+            <ul class="testslider">
+                {volist name="tips" id="tip"}
+                <li><i class="iconfont icon-notice"></i>&nbsp;{$tip.tip_title}</li>
+                {/volist}
+        </ul>
+    </div>
+    <script src="home_js/jquery.textSlider.js"></script>
+    <script>
+        $(function(){
+            $(".alert").textSlider();
+        })
+    </script>
+
+    {volist name="indexdata.articles" id="indexart" empty="暂无文章"}
+        <article>
+            <h5>
+                {eq name="indexart.art_original" value="1"}
+                <span class="original">[ 原创 ]</span>
+                <i class="iconfont icon-recommend tui"></i>
+                {else /}
+                <span class="reprint">[ 转载 ]</span>
+                {/eq}
+                <a href="{:url('Article/index',['id'=>$indexart['art_id']])}">{$indexart.art_title}</a>
+            </h5>
+            <div class="clearfix" >
+                <div class="article-remark">
+                    <div class="article-css3">
+                        <img class="article-css3_img" src="{$indexart.art_img}" alt="Image 01">
+                        <div class="article-css3_caption">
+                            <p class="article-css3_caption_p">{$indexart.art_title}</p>
+                            <a class="article-css3_caption_a" href="{:url('Article/index',['id'=>$indexart['art_id']])}" target="_blank"></a>
+                        </div>
+                    </div>
+                    <!--<a class="article-img-a image-light" href="{:url('Article/index',['id'=>$indexart['art_id']])}">-->
+                        <!--<img src="home_img/{$indexart.art_img}" class="article-img" alt="{$indexart.art_title}" title="{$indexart.art_title}" />-->
+                    <!--</a>-->
+                    {$indexart.art_remark}
+                    <a href="{:url('Article/index',['id'=>$indexart['art_id']])}" class="article-look">继续阅读</a>
+                </div>
+                <footer class="article-footer">
+                    <div class="article-footer-l">
+                        <i class="iconfont icon-tags"></i>{$indexart.art_keyword|getKeyword}
+                    </div>
+                    <div class="article-footer-r">
+                        <i class="iconfont icon-hit"></i> {$indexart.art_hit}&nbsp;&nbsp;
+                        <i class="iconfont icon-review"></i> {$indexart.nums|getNums}
+                    </div>
+                </footer>
+            </div>
+        </article>
+    {/volist}
+{/block}

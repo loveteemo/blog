@@ -1,0 +1,110 @@
+{extend name="layout"}
+{block name="title"}
+<div id="content-header">
+    <h1>留言 & 评论</h1>
+</div>
+<div id="breadcrumb">
+    <a href="{:url('Admin/Index/index')}" title="回到首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+    <a href="#" class="current">留言 & 评论</a>
+</div>
+{/block}
+{block name="content"}
+<div class="row-fluid">
+    <div class="span12">
+        <div class="widget-box">
+            <form action="">
+                <div class="widget-title">
+                    <h5>留言 & 评论 管理</h5>
+                </div>
+                <div class="widget-content">
+                    <form action="{:url('Admin/Comment/index')}" class="search-box">
+                        <div class="search-p">
+                            <label>模块</label>
+                            <div class="radio">
+                                <input type="radio" name="type" id="radio_1" value="1" {eq name="Think.get.type" value="1"} checked {/eq} /><label for="radio_1">文章</label>&nbsp;
+                                <input type="radio" name="type" id="radio_2" value="0" {eq name="Think.get.type" value="0"} checked {/eq} /><label for="radio_2">留言板</label>&nbsp;
+                            </div>
+                        </div>
+                        <div class="search-p">
+                            <label>状态</label>
+                            <div class="radio">
+                                <input type="radio" name="status" id="radio_3" value="1" {eq name="Think.get.status" value="1"} checked {/eq} /><label for="radio_3">回复</label>&nbsp;
+                                <input type="radio" name="status" id="radio_4" value="0" {eq name="Think.get.status" value="0"} checked {/eq} /><label for="radio_4">未回复</label>&nbsp;
+                            </div>
+                        </div>
+                        <div class="search-p">
+                            <label>显示</label>
+                            <div class="radio">
+                                <input type="radio" name="view" id="radio_5" value="1" {eq name="Think.get.view" value="1"} checked {/eq} /><label for="radio_5">显示</label>&nbsp;
+                                <input type="radio" name="view" id="radio_6" value="0" {eq name="Think.get.view" value="0"} checked {/eq} /><label for="radio_6">不显示</label>&nbsp;
+                            </div>
+                        </div>
+                    </form>
+                    <style>
+                        .table { table-layout:fixed; word-break: break-all; word-wrap: break-word; }
+                        .search-query>input{width: 300px;margin-top: 9px;margin-right: 10px;}
+                        .table th, .table td{vertical-align: middle !important;}
+                    </style>
+                    <table class="table table-bordered table-striped with-check">
+                        <thead>
+                        <tr>
+                            <th style="width: 170px !important;">用户名</th>
+                            <th style="width: 170px !important;">模块</th>
+                            <th width="35%">评论</th>
+                            <th width="10%">地址</th>
+                            <th width="10%">评论时间</th>
+                            <th style="width: 50px !important;">显示</th>
+                            <th width="10%">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="list" id="c"}
+                        <tr>
+                            <td><img class="user-img" src="{$c.mem_img}">{$c.mem_name}</td>
+                            <td>
+                                {eq name="c['com_artid']" value="0"}
+                                    留言板
+                                {else/}
+                                    <span style="color: red;"  class="tips" data-tips="{$c.art_title}">[文章]</span>{$c.art_title|strip_tags|msubstr=0,10,'utf-8',true}
+                                {/eq}
+                            </td>
+                            <td>
+                                {$c.com_content}
+                            </td>
+                            <td>
+                                {$c.com_city}
+                            </td>
+                            <td>
+                                {$c.com_addtime|date="m-d H:i",###}
+                            </td>
+                            <td style="text-align: center">
+                                <button class="btn btn-mini changgeview" data-url="{:url('Admin/Comment/view')}" data-id="{$c.com_id}" data-view="{$c.com_view}">{$c.com_view?'显示':'不显示'}</button>
+                            </td>
+                            <td style="text-align: center">
+                                <button type="button" class="btn btn-mini edit" data-width="700" data-height="500" data-url="{:url('Admin/Comment/edit',['id'=>$c['com_id']])}">查看</button>
+                                <button type="button" class="btn btn-mini delete" data-url="{:url('Admin/Comment/delete')}" data-id="{$c.com_id}">删除</button>
+                            </td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                    {$list->render()}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $("input[type='radio']").click(function () {
+        $('form').submit();
+    });
+
+    // === 提示 === //
+    $(document).on('click',".tips",function(){
+        var txt = $(this).data('tips');
+        layer.tips(txt, $(this), {
+            tips: [1, '#0FA6D8'] //还可配置颜色
+        });
+    });
+</script>
+{/block}

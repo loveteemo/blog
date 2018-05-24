@@ -1,0 +1,78 @@
+{extend name="layout"}
+{block name="title"}
+<div id="content-header">
+    <h1>会员</h1>
+</div>
+<div id="breadcrumb">
+    <a href="{:url('Admin/Index/index')}" title="回到首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+    <a href="#" class="current">会员</a>
+</div>
+{/block}
+{block name="content"}
+<div class="row-fluid">
+    <div class="span12">
+        <div class="widget-box">
+            <form action="">
+            <div class="widget-title">
+                <h5>会员 列表</h5>
+            </div>
+            <div class="widget-content">
+                <div class="search-query">
+                    <input type="text" name="keyword" value="{$Think.get.keyword}"><button class="btn btn-info">搜索</button>
+                </div>
+                <style>
+                    .search-query>input{width: 300px;margin-top: 9px;margin-right: 10px;}
+                    .table th, .table td{vertical-align: middle !important;}
+                    input{width: 50px;}
+                </style>
+                    <table class="table table-bordered table-striped with-check">
+                        <thead>
+                        <tr>
+                            <th>头像</th>
+                            <th>用户名</th>
+                            <th>性别</th>
+                            <th>OPENID</th>
+                            <th>最近登陆时间</th>
+                            <th>登陆次数</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="list" id="m"}
+                        <tr>
+                            <td style="text-align: center;width: 200px">
+                                <img src="{$m.mem_img}" alt="" width="150" class="user-img">
+                            </td>
+                            <td>
+                                {$m.mem_name}
+                            </td>
+                            <td>
+                                {$m['mem_sex'] == 1?'男':'女'}
+                            </td>
+                            <td>
+                                {$m.mem_openid}
+                            </td>
+                            <td>
+                                {$m.mem_logintime|date="Y-m-d H:i:s",###}
+                            </td>
+                            <td>
+                                {$m.mem_loginnum}
+                            </td>
+                            <td>
+                                {eq name="m.mem_auth" value="1"}
+                                <button type="button" class="btn btn-mini setadmin" data-id="{$m.mem_id}" data-auth="{$m.mem_auth}" data-url="{:url('Admin/Member/setAuth')}">取消管理员</button>
+                                {else/}
+                                <button type="button" class="btn btn-mini setadmin" data-id="{$m.mem_id}" data-auth="{$m.mem_auth}" data-url="{:url('Admin/Member/setAuth')}">设置管理员</button>
+                                {/eq}
+                            </td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                    {$list->render()}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}

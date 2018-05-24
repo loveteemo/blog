@@ -1,0 +1,6 @@
+{
+    "require": {
+        "loveteemo/qqconnect": "^1.2",
+        "loveteemo/wxnative": "^0.3.0"
+    }
+}

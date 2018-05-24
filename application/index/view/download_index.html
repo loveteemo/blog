@@ -1,0 +1,34 @@
+{extend name="layout"}
+{block name="banner"}
+</div>
+</div>
+<div class="links-head-ban">
+    <div class="links-head">
+        <h3><i class="iconfont icon-links" style="font-size: 50px;"></i></h3>
+        <h5>{$Think.config.auth.blogname}资源区</h5>
+        <p>博客资源整理来源于自己原创或网络收集……</p>
+        <p>如有侵权请在留言板留言，或发送邮件至admin@loveteemo.com</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row aerousel">
+        <div class="resoure">
+            {volist name="downdata" id="down"}
+                <div class="col-md-4 text-center">
+                    <a href="{:url('Download/info',['id'=>$down['art_id']])}">
+                    <div class="thumbnail clearfix">
+                        <div class="col-md-12" style="padding: 15px;border-bottom: 1px solid #D7D7D7;">{$down.art_title}</div>
+                        <div class="col-md-12" style="padding: 10px;">
+                            <img height="166" src="{$down.art_img}" alt="{$down.art_title}">
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            {/volist}
+        </div>
+    </div>
+</div>
+{/block}
+{block name="left"}{/block}
+{block name="right"}{/block}

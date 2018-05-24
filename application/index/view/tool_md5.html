@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Md5加密 - 工具箱 - {$systeminfo.sys_title}</title>
+    <meta name="keywords" content="{$systeminfo.sys_keyword}" />
+    <meta name="description" content="{$systeminfo.sys_remark}" />
+    <meta name="version" content="v {$systeminfo.sys_version}" />
+    <meta name="author" content="{$Think.config.auth.author}"/>
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if lt IE 9]>
+    <script>window.location.href= "{:url('base/ieerror')}";</script>
+    <![endif]-->
+    <link rel="stylesheet" href="home_css/bootstrap.css?v={$systeminfo.sys_version}" />
+    <link rel="stylesheet" href="home_css/my.css?v={$systeminfo.sys_version}" />
+</head>
+<body>
+<div class="tool_nav container">
+    <p class="tooltitle"><a class="btn-xs btn-danger toolback" href="{:url('tool/index')}">返回工具</a>Md5加密</p>
+    <p>输入需要转换的值</p>
+    <textarea class="form-control" name="text" rows="10" id="test" ></textarea>
+    <a onclick="ye.value = hex_md5(test.value).substring(8, 24)" class="btn btn-success">16位小写</a>
+    <a onclick="ye.value = hex_md5(test.value).substring(8, 24).toUpperCase()" class="btn btn-success">16位大写</a>
+    <a onclick="ye.value = hex_md5(test.value)" class="btn btn-success">32位小写</a>
+    <a onclick="ye.value = hex_md5(test.value).toUpperCase()" class="btn btn-success">32位大写</a>
+    <p>转换后的值</p>
+    <textarea class="form-control" rows="10" id="ye" name="MD5Text"></textarea>
+</div>
+<script type="text/javascript" src="tool_js/md5.js"></script>
+</body>
+</html>

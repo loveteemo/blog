@@ -1,0 +1,45 @@
+{extend name="layout"}
+{block name="banner"}
+<ol class="breadcrumb sider-margin">
+    <li><a href="{:url('Index/index')}">网站首页</a></li>
+    <li class="active">分类&nbsp;|&nbsp;{$title}</li>
+</ol>
+{/block}
+{block name="left"}
+{volist name="catedata.articles" id="Cateart"}
+    <article>
+        <h5>
+            {eq name="Cateart.art_original" value="1"}
+            <span class="original">[ 原创 ]</span>
+            <i class="iconfont icon-recommend tui"></i>
+            {else /}
+            <span class="reprint">[ 转载 ]</span>
+            {/eq}
+            <a href="{:url('Article/index',['id'=>$Cateart['art_id']])}">{$Cateart.art_title}</a>
+        </h5>
+        <div class="clearfix" >
+            <p class="article-remark">
+                <a class="article-img-a image-light" href="{:url('Article/index',['id'=>$Cateart['art_id']])}">
+                    <img src="{$Cateart.art_img}" class="article-img" alt="{$Cateart.art_title}" title="{$Cateart.art_title}" />
+                </a>
+                {$Cateart.art_remark}
+                <a href="{:url('Article/index',['id'=>$Cateart['art_id']])}" class="article-look">继续阅读</a>
+            </p>
+            <footer class="article-footer">
+                <div class="article-footer-l">
+                    <i class="iconfont icon-tags"></i>{$Cateart.art_keyword|getKeyword}
+                </div>
+                <div class="article-footer-r">
+                    <i class="iconfont icon-hit"></i>&nbsp;{$Cateart.art_hit}&nbsp;&nbsp;
+                    <i class="iconfont icon-review"></i>&nbsp;{$Cateart.nums|getNums}
+                </div>
+            </footer>
+        </div>
+    </article>
+{/volist}
+{if condition=" count($catedata.articles) egt 8 "}
+<div class="more">
+    <span class="loadingmore" data-id="{$Request.param.id}" data-key="{$Request.param.key}" data-lenth="1" data-url="{:url('Cate/ajaxList')}">加载更多</span>
+</div>
+{/if}
+{/block}

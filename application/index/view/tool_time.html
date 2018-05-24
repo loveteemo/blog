@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>时间戳转换 - 工具箱 - {$systeminfo.sys_title}</title>
+    <meta name="keywords" content="{$systeminfo.sys_keyword}" />
+    <meta name="description" content="{$systeminfo.sys_remark}" />
+    <meta name="version" content="v {$systeminfo.sys_version}" />
+    <meta name="author" content="{$Think.config.auth.author}"/>
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if lt IE 9]>
+    <script>window.location.href= "{:url('base/ieerror')}";</script>
+    <![endif]-->
+    <link rel="stylesheet" href="home_css/bootstrap.css?v={$systeminfo.sys_version}" />
+    <link rel="stylesheet" href="home_css/my.css?v={$systeminfo.sys_version}" />
+</head>
+<body>
+<style>
+    form{margin-bottom: 20px;}
+    input{margin: 0 10px;}
+    .unix{width: 70px !important;}
+    .result{width: 300px;}
+</style>
+<div class="tool_nav container">
+    <p class="tooltitle"><a class="btn-xs btn-danger toolback" href="{:url('tool/index')}">返回工具</a>时间戳转换</p>
+    <form action="" name="unix2beijing" class="form-inline">
+        <div class="form-group">
+            <label for="firstTimestamp">当前Unix时间戳</label>
+            <input type="text" name="timestamp" class="form-control" id="firstTimestamp" placeholder="当前Unix时间戳">
+        </div>
+        <button type="button" class="btn btn-default" onclick="unix2human();">转换</button>
+        <div class="form-group">
+            <input type="text" name="result" class="form-control" id="nowdatetime" placeholder="当前北京时间">
+        </div>
+    </form>
+
+    <form name="beijing2unix" action="" class="">
+        <div class="form-group form-inline">
+            <label for="">北京时间转Unix</label>
+            <input type="text" class="form-control unix" name="year"  maxlength="4">年
+            <input type="text" class="form-control unix" name="month" maxlength="2">月
+            <input type="text" class="form-control unix" name="day" maxlength="2">日
+            <input type="text" class="form-control unix" name="hour" maxlength="2">点
+            <input type="text" class="form-control unix" name="minute" maxlength="2">分
+            <input type="text" class="form-control unix" name="second" maxlength="2">秒
+        </div>
+        <div class="form-group form-inline">
+            <button type="button" onclick="human2unix();" class="btn btn-success">转换为Unix时间</button>
+            <input type="text" name="result" class="form-control result">
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="tool_js/time.js"></script>
+</body>
+</html>

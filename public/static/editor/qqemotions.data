@@ -1,0 +1,1052 @@
+﻿[{
+	"phrase": "[微笑]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif",
+	"value": "[微笑]",
+	"picid": ""
+}, {
+	"phrase": "[撇嘴]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/1.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/1.gif",
+	"value": "[撇嘴]",
+	"picid": ""
+}, {
+	"phrase": "[色]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/2.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/2.gif",
+	"value": "[色]",
+	"picid": ""
+}, {
+	"phrase": "[发呆]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/3.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/3.gif",
+	"value": "[发呆]",
+	"picid": ""
+}, {
+	"phrase": "[得意]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/4.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/4.gif",
+	"value": "[得意]",
+	"picid": ""
+}, {
+	"phrase": "[流泪]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/5.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/5.gif",
+	"value": "[流泪]",
+	"picid": ""
+}, {
+	"phrase": "[害羞]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/6.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/6.gif",
+	"value": "[害羞]",
+	"picid": ""
+}, {
+	"phrase": "[闭嘴]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/7.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/7.gif",
+	"value": "[闭嘴]",
+	"picid": ""
+}, {
+	"phrase": "[睡]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/8.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/8.gif",
+	"value": "[睡]",
+	"picid": ""
+}, {
+	"phrase": "[大哭]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/9.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/9.gif",
+	"value": "[大哭]",
+	"picid": ""
+}, {
+	"phrase": "[尴尬]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/10.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/10.gif",
+	"value": "[尴尬]",
+	"picid": ""
+}, {
+	"phrase": "[发怒]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/11.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/11.gif",
+	"value": "[发怒]",
+	"picid": ""
+}, {
+	"phrase": "[调皮]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/12.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/12.gif",
+	"value": "[调皮]",
+	"picid": ""
+}, {
+	"phrase": "[呲牙]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/13.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/13.gif",
+	"value": "[呲牙]",
+	"picid": ""
+}, {
+	"phrase": "[惊讶]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/14.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/14.gif",
+	"value": "[惊讶]",
+	"picid": ""
+}, {
+	"phrase": "[难过]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/15.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/15.gif",
+	"value": "[难过]",
+	"picid": ""
+}, {
+	"phrase": "[酷]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/16.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/16.gif",
+	"value": "[酷]",
+	"picid": ""
+}, {
+	"phrase": "[冷汗]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/17.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/17.gif",
+	"value": "[冷汗]",
+	"picid": ""
+}, {
+	"phrase": "[抓狂]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/18.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/18.gif",
+	"value": "[抓狂]",
+	"picid": ""
+}, {
+	"phrase": "[吐]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/19.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/19.gif",
+	"value": "[吐]",
+	"picid": ""
+}, {
+	"phrase": "[偷笑]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/20.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/20.gif",
+	"value": "[偷笑]",
+	"picid": ""
+}, {
+	"phrase": "[可爱]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/21.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/21.gif",
+	"value": "[可爱]",
+	"picid": ""
+}, {
+	"phrase": "[白眼]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/22.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/22.gif",
+	"value": "[白眼]",
+	"picid": ""
+}, {
+	"phrase": "[傲慢]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/23.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/23.gif",
+	"value": "[傲慢]",
+	"picid": ""
+}, {
+	"phrase": "[饥饿]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/24.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/24.gif",
+	"value": "[饥饿]",
+	"picid": ""
+}, {
+	"phrase": "[困]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/25.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/25.gif",
+	"value": "[困]",
+	"picid": ""
+}, {
+	"phrase": "[惊恐]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/26.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/26.gif",
+	"value": "[惊恐]",
+	"picid": ""
+}, {
+	"phrase": "[流汗]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/27.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/27.gif",
+	"value": "[流汗]",
+	"picid": ""
+}, {
+	"phrase": "[憨笑]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/28.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/28.gif",
+	"value": "[憨笑]",
+	"picid": ""
+}, {
+	"phrase": "[奋斗]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/29.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/29.gif",
+	"value": "[奋斗]",
+	"picid": ""
+}, {
+	"phrase": "[奋斗]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/30.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/30.gif",
+	"value": "[奋斗]",
+	"picid": ""
+}, {
+	"phrase": "[咒骂]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/31.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/31.gif",
+	"value": "[咒骂]",
+	"picid": ""
+}, {
+	"phrase": "[疑问]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/32.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/32.gif",
+	"hot": false,
+	"value": "[疑问]",
+	"picid": ""
+}, {
+	"phrase": "[嘘]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/33.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/33.gif",
+	"value": "[嘘]",
+	"picid": ""
+}, {
+	"phrase": "[晕]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/34.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/34.gif",
+	"value": "[晕]",
+	"picid": ""
+}, {
+	"phrase": "[折磨]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/35.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/35.gif",
+	"value": "[折磨]",
+	"picid": ""
+}, {
+	"phrase": "[衰]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/36.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/36.gif",
+	"value": "[衰]",
+	"picid": ""
+}, {
+	"phrase": "[骷髅]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/37.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/37.gif",
+	"value": "[骷髅]",
+	"picid": ""
+}, {
+	"phrase": "[敲打]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/38.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/38.gif",
+	"value": "[敲打]",
+	"picid": ""
+}, {
+	"phrase": "[再见]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/39.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/39.gif",
+	"value": "[再见]",
+	"picid": ""
+}, {
+	"phrase": "[擦汗]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/40.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/40.gif",
+	"value": "[擦汗]",
+	"picid": ""
+}, {
+	"phrase": "[抠鼻]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/41.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/41.gif",
+	"value": "[抠鼻]",
+	"picid": ""
+}, {
+	"phrase": "[鼓掌]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/42.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/42.gif",
+	"value": "[鼓掌]",
+	"picid": ""
+}, {
+	"phrase": "[糗大了]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/43.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/43.gif",
+	"value": "[糗大了]",
+	"picid": ""
+}, {
+	"phrase": "[坏笑]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/44.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/44.gif",
+	"value": "[坏笑]",
+	"picid": ""
+}, {
+	"phrase": "[左哼哼]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/45.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/45.gif",
+	"value": "[左哼哼]",
+	"picid": ""
+}, {
+	"phrase": "[右哼哼]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/46.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/46.gif",
+	"value": "[右哼哼]",
+	"picid": ""
+}, {
+	"phrase": "[哈欠]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/47.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/47.gif",
+	"value": "[哈欠]",
+	"picid": ""
+}, {
+	"phrase": "[鄙视]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/48.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/48.gif",
+	"value": "[鄙视]",
+	"picid": ""
+}, {
+	"phrase": "[委屈]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/49.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/49.gif",
+	"value": "[委屈]",
+	"picid": ""
+}, {
+	"phrase": "[快哭了]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/50.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/50.gif",
+	"value": "[快哭了]",
+	"picid": ""
+}, {
+	"phrase": "[阴险]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/51.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/51.gif",
+	"value": "[阴险]",
+	"picid": ""
+}, {
+	"phrase": "[亲亲]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/52.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/52.gif",
+	"value": "[亲亲]",
+	"picid": ""
+}, {
+	"phrase": "[吓]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/53.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/53.gif",
+	"value": "[吓]",
+	"picid": ""
+}, {
+	"phrase": "[可怜]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/54.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/54.gif",
+	"value": "[可怜]",
+	"picid": ""
+}, {
+	"phrase": "[菜刀]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/55.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/55.gif",
+	"value": "[菜刀]",
+	"picid": ""
+}, {
+	"phrase": "[西瓜]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/56.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/56.gif",
+	"value": "[西瓜]",
+	"picid": ""
+}, {
+	"phrase": "[啤酒]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/57.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/57.gif",
+	"value": "[啤酒]",
+	"picid": ""
+}, {
+	"phrase": "[篮球]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/58.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/58.gif",
+	"value": "[篮球]",
+	"picid": ""
+}, {
+	"phrase": "[乒乓]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/59.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/59.gif",
+	"value": "[乒乓]",
+	"picid": ""
+}, {
+	"phrase": "[咖啡]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/60.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/60.gif",
+	"value": "[咖啡]",
+	"picid": ""
+}, {
+	"phrase": "[饭]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/61.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/61.gif",
+	"value": "[饭]",
+	"picid": ""
+}, {
+	"phrase": "[猪头]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/62.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/62.gif",
+	"value": "[猪头]",
+	"picid": ""
+}, {
+	"phrase": "[玫瑰]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/63.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/63.gif",
+	"value": "[玫瑰]",
+	"picid": ""
+}, {
+	"phrase": "[凋谢]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/64.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/64.gif",
+	"value": "[凋谢]",
+	"picid": ""
+}, {
+	"phrase": "[示爱]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/65.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/65.gif",
+	"value": "[示爱]",
+	"picid": ""
+}, {
+	"phrase": "[爱心]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/66.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/66.gif",
+	"value": "[爱心]",
+	"picid": ""
+}, {
+	"phrase": "[心碎]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/67.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/67.gif",
+	"value": "[心碎]",
+	"picid": ""
+}, {
+	"phrase": "[蛋糕]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/68.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/68.gif",
+	"value": "[蛋糕]",
+	"picid": ""
+}, {
+	"phrase": "[闪电]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/69.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/69.gif",
+	"value": "[闪电]",
+	"picid": ""
+}, {
+	"phrase": "[炸弹]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/70.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/70.gif",
+	"value": "[炸弹]",
+	"picid": ""
+}, {
+	"phrase": "[刀]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/71.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/71.gif",
+	"value": "[刀]",
+	"picid": ""
+}, {
+	"phrase": "[足球]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/72.gif",
+	"hot": false,
+	"common": true,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/72.gif",
+	"value": "[足球]",
+	"picid": ""
+}, {
+	"phrase": "[瓢虫]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/73.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/73.gif",
+	"value": "[瓢虫]",
+	"picid": ""
+}, {
+	"phrase": "[便便]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/74.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/74.gif",
+	"value": "[便便]",
+	"picid": ""
+}, {
+	"phrase": "[月亮]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/75.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/75.gif",
+	"value": "[月亮]",
+	"picid": ""
+}, {
+	"phrase": "[太阳]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/76.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/76.gif",
+	"value": "[太阳]",
+	"picid": ""
+}, {
+	"phrase": "[礼物]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/77.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/77.gif",
+	"value": "[礼物]",
+	"picid": ""
+}, {
+	"phrase": "[拥抱]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/78.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/78.gif",
+	"value": "[拥抱]",
+	"picid": ""
+}, {
+	"phrase": "[强]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/79.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/79.gif",
+	"value": "[强]",
+	"picid": ""
+}, {
+	"phrase": "[弱]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/80.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/80.gif",
+	"value": "[弱]",
+	"picid": ""
+}, {
+	"phrase": "[握手]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/81.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/81.gif",
+	"value": "[握手]",
+	"picid": ""
+}, {
+	"phrase": "[胜利]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/82.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/82.gif",
+	"value": "[胜利]",
+	"picid": ""
+}, {
+	"phrase": "[抱拳]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/83.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/83.gif",
+	"value": "[抱拳]",
+	"picid": ""
+}, {
+	"phrase": "[勾引]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/84.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/84.gif",
+	"value": "[勾引]",
+	"picid": ""
+}, {
+	"phrase": "[拳头]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/85.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/85.gif",
+	"value": "[拳头]",
+	"picid": ""
+}, {
+	"phrase": "[差劲]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/86.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/86.gif",
+	"value": "[差劲]",
+	"picid": ""
+}, {
+	"phrase": "[爱你]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/87.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/87.gif",
+	"value": "[爱你]",
+	"picid": ""
+}, {
+	"phrase": "[NO]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/88.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/88.gif",
+	"value": "[NO]",
+	"picid": ""
+}, {
+	"phrase": "[OK]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/89.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/89.gif",
+	"value": "[OK]",
+	"picid": ""
+}, {
+	"phrase": "[爱情]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/90.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/90.gif",
+	"value": "[爱情]",
+	"picid": ""
+}, {
+	"phrase": "[飞吻]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/91.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/91.gif",
+	"value": "[飞吻]",
+	"picid": ""
+}, {
+	"phrase": "[跳跳]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/92.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/92.gif",
+	"value": "[跳跳]",
+	"picid": ""
+}, {
+	"phrase": "[发抖]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/93.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/93.gif",
+	"value": "[发抖]",
+	"picid": ""
+}, {
+	"phrase": "[怄火]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/94.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/94.gif",
+	"value": "[怄火]",
+	"picid": ""
+}, {
+	"phrase": "[转圈]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/95.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/95.gif",
+	"value": "[转圈]",
+	"picid": ""
+}, {
+	"phrase": "[磕头]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/96.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/96.gif",
+	"value": "[磕头]",
+	"picid": ""
+}, {
+	"phrase": "[回头]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/97.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/97.gif",
+	"value": "[回头]",
+	"picid": ""
+}, {
+	"phrase": "[跳绳]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/98.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/98.gif",
+	"value": "[跳绳]",
+	"picid": ""
+}, {
+	"phrase": "[挥手]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/99.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/99.gif",
+	"value": "[挥手]",
+	"picid": ""
+}, {
+	"phrase": "[激动]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/100.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/100.gif",
+	"value": "[激动]",
+	"picid": ""
+}, {
+	"phrase": "[街舞]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/101.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/101.gif",
+	"value": "[街舞]",
+	"picid": ""
+}, {
+	"phrase": "[献吻]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/102.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/102.gif",
+	"value": "[献吻]",
+	"picid": ""
+}, {
+	"phrase": "[左太极]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/103.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/103.gif",
+	"value": "[左太极]",
+	"picid": ""
+}, {
+	"phrase": "[右太极]",
+	"type": "face",
+	"url": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/104.gif",
+	"hot": true,
+	"common": false,
+	"category": "",
+	"icon": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/104.gif",
+	"value": "[右太极]",
+	"picid": ""
+}]

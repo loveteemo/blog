@@ -1,0 +1,104 @@
+{extend name="layout_iframe"}
+{block name="content"}
+<style>
+    table{font-size: 14px;}
+    tr{height: 45px;}
+    .td-l{width: 100px;text-align:right;padding-right: 20px;}
+</style>
+<form action="{:url('Admin/Comment/edit')}">
+    <input type="hidden" name="com_id" value="{$info.com_id}">
+<table cellpadding="0" cellspacing="0" style="border:0; margin: 30px 0; width: 600px" class="tc">
+    <tr>
+        <td class="td-l">评论人：</td>
+        <td class="tdright">
+            <img class="user-img" src="{$info.mem_img}">{$info.mem_name}
+        </td>
+    </tr>
+    <tr>
+        <td class="td-l">版块：</td>
+        <td class="tdright">
+            {eq name="info['com_artid']" value="0"}
+                留言板
+            {else/}
+                {$info.art_title}
+            {/eq}
+        </td>
+    </tr>
+    <tr>
+        <td class="td-l">内容：</td>
+        <td class="tdright">
+            <textarea style="height:200px;max-height:200px;" name="com_content" id="edit-content">{$info.com_content}</textarea>
+        </td>
+    </tr>
+    <tr>
+        <td class="td-l">时间：</td>
+        <td class="tdright">
+            {$info.com_addtime|date="Y-m-d H:i:s",###}
+        </td>
+    </tr>
+    <tr>
+        <td class="td-l">来自：</td>
+        <td class="tdright">
+            {$info.com_from}
+        </td>
+    </tr>
+    <tr>
+        <td class="td-l">城市：</td>
+        <td class="tdright">
+            {$info.com_city}
+        </td>
+    </tr>
+    <tr>
+        <td class="td-l">回复：</td>
+        <td class="tdright">
+            <textarea style="height:200px;max-height:200px;" name="content" id="edit-content2">{$info.com_rcontent}</textarea>
+        </td>
+    </tr>
+    <tr>
+        <td class="td-l">显示：</td>
+        <td>
+            <div class="radio">
+                <input type="radio" name="com_view" id="radio_1" value="1" {eq name="info['com_view']" value="1"}checked{/eq} /><label for="radio_1">显示</label>&nbsp;
+                <input type="radio" name="com_view" id="radio_2" value="0" {eq name="info['com_view']" value="0"}checked{/eq} /><label for="radio_2">不显示</label>&nbsp;
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="enter">
+            <button class="btn editsave" type="button">回复</button>
+            <button class="btn" type="reset">重置</button>
+        </td>
+    </tr>
+</table>
+</form>
+<link rel="stylesheet" href="admin_css/style.css">
+<script>
+    wangEditor.config.menuFixed = false;
+    //关闭打印log
+    wangEditor.config.printLog = false;
+    // 菜单
+    wangEditor.config.menus = [
+        'emotion','link','unlink','fullscreen'
+    ];
+    //表情
+    wangEditor.config.emotions = {
+        'weibo': {
+            title: '微博表情',
+            data: '/static/editor/weiboemotions.data'
+        },
+        'qq':{
+            title: 'QQ表情',
+            data: '/static/editor/qqemotions.data'
+        }
+    };
+    var editor = new wangEditor('edit-content');
+
+    editor.create();
+
+    var editor2 = new wangEditor('edit-content2');
+    editor2.create();
+
+    editor2.$editorContainer.css('z-index', 10);
+    editor.$editorContainer.css('z-index', 20);
+</script>
+{/block}

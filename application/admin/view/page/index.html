@@ -1,0 +1,59 @@
+{extend name="layout"}
+{block name="title"}
+<div id="content-header">
+    <h1>单页</h1>
+</div>
+<div id="breadcrumb">
+    <a href="{:url('Admin/Index/index')}" title="回到首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+    <a href="#" class="current">单页</a>
+</div>
+{/block}
+{block name="content"}
+<div class="row-fluid">
+    <div class="span12" style="width: 95%">
+        <div class="alert alert-info">
+            修改代码请点击修改源码，修改文字可以直接修改!
+            <a href="#" data-dismiss="alert" class="close">×</a>
+        </div>
+        <div class="widget-box" id="editor" style="height: 500px;">{$html}</div>
+        <div class="form-actions">
+            <button type="button" class="btn btn-primary editpage" data-url="{:url('Admin/Page/index')}">修改</button>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="com_editor/css/wangEditor.min.css">
+<script src="com_editor/js/wangEditor.min.js"></script>
+<script src="admin_js/editor.config.js"></script>
+<script>
+    $(".editpage").click(function () {
+        var _this = $(this);
+        _this.attr('disabled', true);
+        var url = _this.data('url');
+        layer.msg('后台数据处理中',{icon:16,time:1000000});
+        var data = {
+            "content"   :   editor.$txt.html()
+        };
+        $.ajax({
+            data    : data,
+            type    : "Post",
+            dataType: "Json",
+            url     : url,
+            success :function (data) {
+                if(data.err==0){
+                    layer.msg(data.msg,{icon:1,time:500},function () {
+                        layer.closeAll();
+                        location.href="{:url('Admin/Page/index')}";
+                    });
+                }else{
+                    layer.msg(data.msg,{icon:2,time:500});
+                    _this.attr("disabled",false);
+                }
+            },
+            error   :function () {
+                layer.msg('网络错误',{icon:2,time:500});
+                _this.attr("disabled",false);
+            }
+        });
+    })
+</script>
+{/block}

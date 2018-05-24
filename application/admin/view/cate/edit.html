@@ -1,0 +1,51 @@
+11{extend name="layout_iframe"}
+{block name="content"}
+<form action="{:url('Admin/Cate/edit')}">
+    <table cellpadding="0" cellspacing="0" style="border:0; margin: 0 auto;" class="tc">
+        <tr>
+            <td width="80" align="right">栏目名称：</td>
+            <td class="tdright">
+                <input type="text" name="menu_name" placeholder="请输入栏目名称" value="{$menuinfo.menu_name}">
+                <input type="hidden" name="menu_id" value="{$menuinfo.menu_id}">
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">指向地址：</td>
+            <td class="tdright">
+                <input type="text" name="menu_url" placeholder="请输入指向地址" value="{$menuinfo.menu_url}">
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">上级栏目：</td>
+            <td class="tdright">
+                <div style="width: 262px;">
+                    <select name="menu_parent">
+                        <option value="0" {eq name="menuinfo.menu_parent" value="0"} selected {/eq} >顶级菜单</option>
+                        {volist name="menulist" id="m" key="key"}
+                        <option value="{$m.menu_id}" {eq name="menuinfo.menu_parent" value="$m.menu_id"} selected {/eq} >{:treeEmpty($m['level'])}{$m.menu_name}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">排序：</td>
+            <td class="tdright">
+                <input type="text" name="menu_sort" value="{$menuinfo.menu_sort}">
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">描述：</td>
+            <td class="tdright">
+                <textarea style="width: 252px;" name="menu_remark">{$menuinfo.menu_remark}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="enter">
+                <button class="btn editsave" type="button">保存</button>
+                <button class="btn " type="reset">重置</button>
+            </td>
+        </tr>
+    </table>
+</form>
+{/block}

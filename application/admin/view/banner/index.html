@@ -1,0 +1,68 @@
+{extend name="layout"}
+{block name="title"}
+<div id="content-header">
+    <h1>插件</h1>
+</div>
+<div id="breadcrumb">
+    <a href="{:url('Admin/Index/index')}" title="回到首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+    <a href="#" class="current">首页幻灯</a>
+</div>
+{/block}
+{block name="content"}
+<div class="row-fluid">
+    <div class="span12">
+        <div class="widget-box">
+            <form action="">
+            <div class="widget-title">
+                <h5>Banner 管理</h5>
+                <a class="label label-info add" data-height="350" data-url="{:url('Admin/Banner/add')}">添加</a>
+                <a class="label label-info sort" data-url="{:url('Admin/Banner/sort')}">排序</a>
+            </div>
+            <div class="widget-content">
+                <style>
+                    .table th, .table td{vertical-align: middle !important;}
+                    input{width: 50px;}
+                </style>
+                    <table class="table table-bordered table-striped with-check">
+                        <thead>
+                        <tr>
+                            <th width="5%">ID</th>
+                            <th width="30%">缩略图</th>
+                            <th width="15%">描述</th>
+                            <th width="15%">地址</th>
+                            <th width="10%">显示</th>
+                            <th width="10%">排序</th>
+                            <th width="10%">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="bannerlist" id="b" key="k"}
+                        <tr>
+                            <td>{$b.ban_id}</td>
+                            <td style="text-align: center">
+                                <img src="{$b.ban_img}" alt="" width="200">
+                            </td>
+                            <td>{$b.ban_title}</td>
+                            <td>{$b.ban_url}</td>
+                            <td style="text-align: center">
+                                <button class="btn btn-mini changgeview" data-url="{:url('Admin/Banner/view')}" data-id="{$b.ban_id}" data-view="{$b.ban_view}">{$b.ban_view?'显示':'不显示'}</button>
+                            </td>
+                            <td>
+                                <input type="text" value="{$b.ban_sort}" name="sort[{$k}][ban_sort]">
+                                <input type="hidden" value="{$b.ban_id}" name="sort[{$k}][ban_id]">
+                            </td>
+                            <td style="text-align: center">
+                                <button type="button" class="btn btn-mini edit" data-height="500" data-url="{:url('Admin/Banner/edit',['id'=>$b['ban_id']])}">修改</button>
+                                <button type="button" class="btn btn-mini delete" data-url="{:url('Admin/Banner/delete')}" data-id="{$b.ban_id}">删除</button>
+                            </td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                    {$bannerlist->render()}
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}

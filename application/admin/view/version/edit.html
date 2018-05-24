@@ -1,0 +1,32 @@
+{extend name="layout_iframe"}
+{block name="content"}
+<form action="{:url('Admin/Version/edit')}">
+    <table cellpadding="0" cellspacing="0" style="border:0; margin: 0 auto;" class="tc">
+        <input type="hidden" name="ver_id" value="{$info.ver_id}">
+        <tr>
+            <td width="80" align="right">当前版本号：</td>
+            <td class="tdright">
+                <input type="text" value="{$lastversion}" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">文本：</td>
+            <td class="tdright">
+                <textarea name="ver_text" placeholder="请输入版本描述">{$info.ver_text}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">版本号：</td>
+            <td class="tdright">
+                <input type="text" name="ver_bate" value="{$info.ver_bate}">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="enter">
+                <button class="btn editsave" type="button">修改</button>
+                <button class="btn" type="reset">重置</button>
+            </td>
+        </tr>
+    </table>
+</form>
+{/block}

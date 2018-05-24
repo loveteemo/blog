@@ -1,0 +1,93 @@
+{extend name="layout"}
+{block name="title"}
+<div id="content-header">
+    <h1>仪表盘主页</h1>
+</div>
+<div id="breadcrumb">
+    <a href="{:url('Admin/Index/index')}" title="回到首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+    <a href="#" class="current">仪表盘</a>
+</div>
+{/block}
+{block name="content"}
+<div class="row-fluid">
+    <div class="span12">
+        <div class="alert alert-info">
+            欢迎回到 <strong>LoveTeemo’Blog Admin</strong>. 请保持更新频率和质量哟!
+            <a href="#" data-dismiss="alert" class="close">×</a>
+        </div>
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon"><i class="icon-signal"></i></span>
+                <h5>程序信息</h5>
+                <div class="buttons"><a onclick="location.reload()" class="btn btn-mini"><i class="icon-refresh"></i> 刷新</a></div></div>
+            <div class="widget-content">
+                <div class="row-fluid">
+                    <div class="span4">
+                        <ul class="site-stats">
+                            <li><i class="icon-user"></i> <strong>{$a_indexdata['usernum']}</strong> <small>QQ用户</small></li>
+                            <li><i class="icon-book"></i> <strong>{$a_indexdata['artnums']}</strong> <small>文章</small></li>
+                            <li><i class="icon-heart"></i> <strong>{$a_indexdata['commentnums']}</strong> <small>留言</small></li>
+                            <li><i class="icon-comment"></i> <strong>{$a_indexdata['artcommentnums']}</strong> <small>评论</small></li>
+                            <li><i class="icon-leaf"></i> <strong>{$a_indexdata['links']}</strong> <small>友链</small></li>
+                        </ul>
+                    </div>
+                    <div class="span8">
+                            <div class="widget-content" style="padding: 0;border: none">
+                                <table class="table table-bordered table-striped with-check">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="4">
+                                            <div class="widget-title" style="border: none">
+                                                <h5>服务器信息</h5>
+                                                <span class="label label-info">硬件</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td style="width: 20%">PHP 版本：</td>
+                                        <td style="width: 20%">{:phpversion()}</td>
+                                        <td style="width: 20%">操作系统：</td>
+                                        <td style="width: 20%">{:php_uname('s')}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MySQL 版本：</td>
+                                        <td>暂时无法获取</td>
+                                        <td>Web 服务器：</td>
+                                        <td>{$Think.server.SERVER_SOFTWARE}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>文件上传限制：</td>
+                                        <td>{:ini_get('upload_max_filesize')}</td>
+                                        <td>GD 库支持：</td>
+                                        <td>{:empty(gd_info())?'不支持':'支持'}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>青春博客官网：</td>
+                                        <td><a href="http://www.loveteemo.com" target="_blank">http://www.loveteemo.com</a></td>
+                                        <td>贡献者：</td>
+                                        <td>Long</td>
+                                    </tr>
+                                    <tr>
+                                        <td>当前版本：</td>
+                                        <td>v3.0 dev</td>
+                                        <td>系统使用协议：</td>
+                                        <td><a href="http://www.loveteemo.com/license.html" target="_blank">http://www.loveteemo.com/license.html</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>QQ交流群</td>
+                                        <td>{$Think.config.auth.qqgroup}</td>
+                                        <td>使用手册</td>
+                                        <td><a href="{$Think.config.auth.docurl}" target="_blank">{$Think.config.auth.docurl}</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

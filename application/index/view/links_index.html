@@ -1,0 +1,45 @@
+{extend name="layout"}
+{block name="banner"}
+</div>
+</div>
+<div class="links-head-ban">
+    <div class="links-head">
+        <h3><i class="iconfont icon-links" style="font-size: 50px;"></i></h3>
+        <h5>{$Think.config.auth.blogname}朋友圈</h5>
+        <p>为避免版权纠纷，本站只接受网站完善并且原创更新比较稳定相关的工作室、站点、博客、论坛……</p>
+        <p>申请链接请直接在留言板留言，或发送邮件至admin@loveteemo.com</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row aerousel">
+        <div class="links">
+            <div class="links-two">
+                {volist name="linkdata" id="lt"}
+                <div class="links-two-item">
+                    <div class="links-two-inner links-two-3d">
+                        <a href="{$lt.link_url}" target="_blank" title="{$lt.link_name}">
+                            <h3 class="links-h3"><img src="{$lt.link_favicon}" width="24" alt="{$lt.link_name}">
+                                <span>{$lt.link_name}</span>
+                            </h3>
+                        <p class="links-p" style="margin-top: 10px">{$lt.link_content}</p>
+                        </a>
+                    </div>
+                    <div class="links-two-bg links-two-3d">
+                        <a href="{$lt.link_url}" target="_blank" title="{$lt.link_name}">
+                            <div>
+                            <img src="{$lt.link_favicon}" width="48" alt="{$lt.link_name}">
+                            <h3 class="links-h3">{$lt.link_name}</h3>
+                            <p class="links-p">{$lt.link_url}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {/volist}
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="left"}{/block}
+{block name="right"}{/block}

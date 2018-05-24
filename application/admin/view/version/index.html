@@ -1,0 +1,52 @@
+{extend name="layout"}
+{block name="title"}
+<div id="content-header">
+    <h1>插件</h1>
+</div>
+<div id="breadcrumb">
+    <a href="{:url('Admin/Index/index')}" title="回到首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+    <a href="#" class="current">首页文字</a>
+</div>
+{/block}
+{block name="content"}
+<div class="row-fluid">
+    <div class="widget-box span12">
+        <form action="">
+        <div class="widget-title">
+            <h5>版本 管理</h5>
+            <a class="label label-info add" data-height="300" data-url="{:url('Admin/Version/add')}">添加</a>
+        </div>
+        <div class="widget-content">
+            <style>
+                .table th, .table td{vertical-align: middle !important;}
+            </style>
+            <table class="table table-bordered table-striped with-check">
+                <thead>
+                <tr>
+                    <th width="10%">ID</th>
+                    <th width="10%">版本号</th>
+                    <th width="50%">描述</th>
+                    <th>添加时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {volist name="versionlist" id="v"}
+                <tr>
+                    <td>{$v.ver_id}</td>
+                    <td>{$v.ver_bate}</td>
+                    <td>{$v.ver_text}</td>
+                    <td>{$v.ver_addtime}</td>
+                    <td style="text-align: center">
+                        <button type="button" class="btn btn-mini edit" data-height="300" data-url="{:url('Admin/Version/edit',['id'=>$v['ver_id']])}">修改</button>
+                        <button type="button" class="btn btn-mini delete" data-url="{:url('Admin/Version/delete')}" data-id="{$v.ver_id}">删除</button>
+                    </td>
+                </tr>
+                {/volist}
+                </tbody>
+            </table>
+        </div>
+        </form>
+    </div>
+</div>
+{/block}

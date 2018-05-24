@@ -1,0 +1,110 @@
+{extend name="layout"}
+{block name="banner"}
+<ol class="breadcrumb">
+    <li><a href="{:url('Index/index')}">网站首页</a></li>
+    <li class="active">雁过留名&nbsp;|&nbsp;留言板</li>
+</ol>
+{/block}
+{block name="left"}
+{volist name="commentdata" id="comdata"}
+<div class="media connect" id="{$comdata.com_id}">
+    <div class="media-left">
+        <img src="{$comdata.mem_img}" class="media-object img-circle img-50" alt="{$comdata.mem_name}"/>
+    </div>
+    <div class="media-body">
+        <div class="fool hidden-xs">#{$comdata.com_id}</div>
+        <p class="media-heading">
+            {$comdata.mem_name}
+            {eq name="$comdata.mem_sex" value="1"}
+            <i class="iconfont icon-boy"></i>
+            {else /}
+            <i class="iconfont icon-girl"></i>
+            {/eq}
+            <i class="iconfont icon-time"></i>&nbsp;{$comdata.com_addtime|getTime}&nbsp;&nbsp;
+            <a class="from">{$comdata.com_from}</a>&nbsp;&nbsp;
+            <i class="iconfont icon-address"></i>&nbsp;
+            {$comdata.com_city}
+        </p>
+        <div class="connect-box">{$comdata.com_content}</div>
+        {eq name="$comdata.com_status" value="1"}
+        <hr />
+        <div class="media">
+            <div class="media-left">
+                <a><img class="media-object img-circle img-50" src="home_img/icon/admin.jpg" alt="{$Think.config.auth.adminname}"></a>
+            </div>
+            <div class="media-body">
+                <p class="media-heading">
+                    <i class="iconfont icon-author"></i>&nbsp;{$Think.config.auth.admin}&nbsp;
+                    <i class="iconfont icon-time"></i>&nbsp;{$comdata.com_rtime|date='m/d H:i',###}&nbsp;&nbsp;&nbsp;&nbsp;回复&nbsp;
+                    <a>@{$comdata.mem_name}</a>&nbsp;中说到：
+                </p>
+                <div class="connect-box">{$comdata.com_rcontent}</div>
+            </div>
+        </div>
+        {/eq}
+    </div>
+</div>
+{/volist}
+{if condition=" count($commentdata) egt 5 "}
+<div class="more">
+    <span class="loadingmore" data-id="0" data-lenth="1" data-url="{:url('Comment/ajaxList')}">加载更多</span>
+</div>
+{/if}
+    {:token()}
+{notempty name="Think.session.qq.nick"}
+<span title="QQ昵称" class="qqnick"><i class="iconfont icon-qq"></i>{$Think.session.qq.nick}</span>
+{else/}
+<div class="empty"></div>
+{/notempty}
+<div class="blog-edit" id="edit-content"></div>
+<button class="btn btn-default btn-add" type="button" data-action="{:url('Comment/add')}" data-artid="0">Ctrl + Enter 快速提交</button>
+<link rel="stylesheet" href="com_editor/css/wangEditor.min.css">
+<script src="home_js/jquery-1.10.1.min.js"></script>
+<script src="com_editor/js/wangEditor.min.js"></script>
+<script src="home_js/editor.config.js"></script>
+<script>
+    $(document).keypress(function(e) {
+        if (e.ctrlKey && e.which == 13)
+            $(".btn-add").click();
+    });
+    //=== Blog 评论 ===//
+    $(document).on("click",".btn-add",function(){
+        var url = $(this).data("action");
+        var token = $("input[name='__token__']").val();
+        var artid = $(this).data("artid");
+        var content = editor.$txt.html();
+        content = content.replace(/<.*?>/ig, function (tag) {
+            if (tag === '</a>' || tag.indexOf('<a ') === 0 || tag.indexOf('<img ') === 0) {
+                return tag;
+            } else {
+                return '';
+            }
+        });
+        if($.trim(content)==''){
+            layer.msg("评论不能为空",{icon:3});
+            return false;
+        }
+        layer.msg('正在加载数据', {icon:16, shade: 0.1, time:0});
+        $.ajax({
+            type:"post",
+            url: url,
+            dataType: 'json',
+            data: {"token": token,"content": content,"artid":artid},
+            success:function(data){
+                if(data.err == 0){
+                    layer.msg(data.msg,{icon:1});
+                    window.location.reload();
+                }else if(data.err == 1){
+                    layer.msg(data.msg,{icon:0});
+                    window.location.reload();
+                }else{
+                    layer.msg(data.msg,{icon:2});
+                }
+            },
+            error:function(){
+                layer.msg('网络错误',{icon:3});
+            }
+        });
+    });
+</script>
+{/block}

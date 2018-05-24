@@ -1,0 +1,162 @@
+{extend name="layout"}
+{block name="banner"}
+<ol class="breadcrumb sider-margin">
+    <li><a href="{:url('Index/index')}">网站首页</a></li>
+    <li class="active">学海无涯&nbsp;|&nbsp;{$articledata.menu_name}</li>
+</ol>
+{/block}
+{block name="left"}
+
+<div class="articleinfo">
+    <h5>
+        <small>[ {eq name="articledata.art_original" value="1"}原创{else /}转载{/eq} ]</small>
+        <a>{$articledata.art_title}</a>
+    </h5>
+    <div class="articleinfo-write">栏目：{$articledata.menu_name}&nbsp;&nbsp;作者：{$articledata.art_author}&nbsp;&nbsp;阅读：（{$articledata.art_hit}）<span class="hidden-xs">更新于：{$articledata.art_addtime|getTime}</span></div>
+    <div class="articleinfo-content">{$articledata.art_content}</div>
+    <div class="articleinfo-copy hidden-xs">
+        {eq name="articledata.art_original" value="1"}
+            <p>非特殊说明，本文版权归 {$Think.config.auth.blogname} 所有，转载请注明出处.</p>
+            <p>本文标题：{$articledata.art_title}</p>
+            <p>本文网址：<a class="url"><script>$('.url').append(window.location.href);</script></a>.</p>
+            <p>本文标签：<a>{$articledata.art_keyword}</a></p>
+            {else/}
+            <p>本文系转载于互联网，可自由转载、引用.</p>
+            <p>本文标题：{$articledata.art_title}</p>
+            <p>本文标签：<a>{$articledata.art_keyword}</a></p>
+        {/eq}
+    </div>
+    <hr />
+    <div class="bdsharebuttonbox articleinfo-fenxiang hidden-xs">
+        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{}, "bdText":"", "bdMini":"2", "bdMiniList":false, "bdPic":"", "bdStyle":"1", "bdSize":"32"}, "share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+    <div class="articleinfo-up">
+        <p>上一篇：
+            {empty name="other.up"}
+            &nbsp;没有了
+            {else /}
+            <a title='{$other.up.art_title}' href="{:url('Article/index',['id'=>$other.up['art_id']])}">&nbsp;{$other.up.art_title|msubstr=0,40,'utf-8',true}</a>
+            {/empty}
+        </p>
+    </div>
+    <div class="articleinfo-down">
+        <p>下一篇：
+            {empty name="other.down"}
+            &nbsp;没有了
+            {else /}
+            <a title='{$other.down.art_title}' href="{:url('Article/index',['id'=>$other.down['art_id']])}">&nbsp;{$other.down.art_title|msubstr=0,40,'utf-8',true}</a>
+            {/empty}
+        </p>
+    </div>
+    <hr />
+    {volist name="articlecommondata" id="artcom"}
+        <div class="media connect" id="{$artcom.com_id}">
+            <div class="media-left">
+                <img src="{$artcom.mem_img}" class="media-object img-circle img-50" alt="{$artcom.mem_name}"/>
+            </div>
+            <div class="media-body">
+                <div class="fool hidden-xs">#{$artcom.com_id}</div>
+                <p class="media-heading">
+                    {$artcom.mem_name}
+                    {eq name="$artcom.mem_sex" value="1"}
+                    <i class="iconfont icon-boy"></i>
+                    {else /}
+                    <i class="iconfont icon-girl"></i>
+                    {/eq}
+                    <i class="iconfont icon-time"></i>&nbsp;{$artcom.com_addtime|getTime}&nbsp;&nbsp;
+                    <a class="from">{$artcom.com_from}</a>&nbsp;&nbsp;
+                    <i class="iconfont icon-address"></i>&nbsp;
+                    {$artcom.com_city}
+                </p>
+                <div class="connect-box">{$artcom.com_content}</div>
+                {eq name="$artcom.com_status" value="1"}
+                    <hr />
+                    <div class="media">
+                        <div class="media-left">
+                            <a><img class="media-object img-circle img-50" src="home_img/icon/admin.jpg" alt="{$Think.config.auth.adminname}"></a>
+                        </div>
+                        <div class="media-body">
+                            <p class="media-heading">
+                                <i class="iconfont icon-author"></i>&nbsp;{$Think.config.auth.admin}&nbsp;
+                                <i class="iconfont icon-time"></i>&nbsp;{$artcom.com_rtime|date='m/d H:i',###}&nbsp;&nbsp;&nbsp;&nbsp;回复&nbsp;
+                                <a>@{$artcom.mem_name}</a>&nbsp;中说到：
+                            </p>
+                            <div class="connect-box">{$artcom.com_rcontent}</div>
+                        </div>
+                    </div>
+                {/eq}
+            </div>
+        </div>
+    {/volist}
+    {if condition=" count($articlecommondata) egt 5 "}
+    <div class="more">
+        <span class="loadingmore" data-id="{$Request.param.id}" data-lenth="1" data-url="{:url('Article/ajaxList')}">加载更多</span>
+    </div>
+    {/if}
+    <div class="well">
+        {:token()}
+        {notempty name="Think.session.qq.nick"}
+        <span title="QQ昵称" class="qqnick"><i class="iconfont icon-qq"></i>{$Think.session.qq.nick}</span>
+        {/notempty}
+        <div class="blog-edit" id="edit-content"></div>
+        <button class="btn btn-default btn-add" type="button" data-action="{:url('Comment/add')}" data-artid="{$articledata.art_id}">Ctrl + Enter 快速提交</button>
+    </div>
+</div>
+<script src="home_js/jquery-1.10.1.min.js"></script>
+<script src="com_editor/js/wangEditor.min.js"></script>
+<script src="home_js/editor.config.js"></script>
+<link rel="stylesheet" href="com_editor/css/wangEditor.min.css">
+<link rel="stylesheet" href="home_css/solarized_light.css" />
+<script>
+    $(document).keypress(function(e) {
+        if (e.ctrlKey && e.which == 13)
+            $(".btn-add").click();
+    });
+    //=== Blog 评论 ===//
+    $(document).on("click",".btn-add",function(){
+        var url = $(this).data("action");
+        var token = $("input[name='__token__']").val();
+        var artid = $(this).data("artid");
+        var content = editor.$txt.html();
+        content = content.replace(/<.*?>/ig, function (tag) {
+            if (tag === '</a>' || tag.indexOf('<a ') === 0 || tag.indexOf('<img ') === 0) {
+                return tag;
+            } else {
+                return '';
+            }
+        });
+        if($.trim(content)==''){
+            layer.msg("评论不能为空",{icon:3});
+            return false;
+        }
+        layer.msg('正在加载数据', {icon:16, shade: 0.1, time:0});
+        $.ajax({
+            type:"post",
+            url: url,
+            dataType: 'json',
+            data: {"token": token,"content": content,"artid":artid},
+            success:function(data){
+                if(data.err == 0){
+                    layer.msg(data.msg,{icon:1});
+                    window.location.reload();
+                }else if(data.err == 1){
+                    layer.msg(data.msg,{icon:0});
+                    window.location.reload();
+                }else{
+                    layer.msg(data.msg,{icon:2});
+                }
+            },
+            error:function(){
+                layer.msg('网络错误',{icon:3});
+            }
+        });
+    });
+</script>
+{/block}

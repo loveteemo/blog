@@ -1,0 +1,73 @@
+{extend name="layout"}
+{block name="title"}
+<div id="content-header">
+    <h1>友情链接</h1>
+</div>
+<div id="breadcrumb">
+    <a href="{:url('Admin/Index/index')}" title="回到首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+    <a href="#" class="current">友情链接</a>
+</div>
+{/block}
+{block name="content"}
+<div class="row-fluid">
+    <div class="span12">
+        <div class="widget-box">
+            <form action="">
+            <div class="widget-title">
+                <h5>友情链接 管理</h5>
+                <a class="label label-info add" data-height="450" data-url="{:url('Admin/Link/add')}">添加</a>
+                <a class="label label-info sort" data-url="{:url('Admin/Link/sort')}">排序</a>
+            </div>
+            <div class="widget-content">
+                <!--<div class="search-query">-->
+                    <!--<input type="text" name="keyword" value="{$Think.get.keyword}"><button class="btn btn-info">搜索</button>-->
+                <!--</div>-->
+                <style>
+                    img{max-width:30px}
+                    .search-query>input{width: 300px;margin-top: 9px;margin-right: 10px;}
+                    .table th, .table td{vertical-align: middle !important;}
+                    input{width: 50px;}
+                </style>
+                    <table class="table table-bordered table-striped with-check">
+                        <thead>
+                        <tr>
+                            <th width="5%">ID</th>
+                            <th width="15%">图标&名称</th>
+                            <th>描述</th>
+                            <th width="15%">地址</th>
+                            <th width="10%">显示</th>
+                            <th width="10%">排序</th>
+                            <th width="10%">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="list" id="l" key="k"}
+                        <tr>
+                            <td>{$l.link_id}</td>
+                            <td style="text-align: center">
+                                <img src="{$l.link_favicon}">{$l.link_name}
+                            </td>
+                            <td>{$l.link_content}</td>
+                            <td>{$l.link_url}</td>
+                            <td style="text-align: center">
+                                <button class="btn btn-mini changgeview" data-url="{:url('Admin/Link/view')}" data-id="{$l.link_id}" data-view="{$l.link_view}">{$l.link_view?'显示':'不显示'}</button>
+                            </td>
+                            <td>
+                                <input type="text" value="{$l.link_sort}" name="sort[{$k}][link_sort]">
+                                <input type="hidden" value="{$l.link_id}" name="sort[{$k}][link_id]">
+                            </td>
+                            <td style="text-align: center">
+                                <button type="button" class="btn btn-mini edit" data-height="500" data-url="{:url('Admin/Link/edit',['id'=>$l['link_id']])}">修改</button>
+                                <button type="button" class="btn btn-mini delete" data-url="{:url('Admin/Link/delete')}" data-id="{$l.link_id}">删除</button>
+                            </td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                    {$list->render()}
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}

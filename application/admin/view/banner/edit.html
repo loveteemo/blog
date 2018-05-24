@@ -1,0 +1,99 @@
+{extend name="layout_iframe"}
+{block name="content"}
+<form action="{:url('Admin/Banner/edit')}">
+    <table cellpadding="0" cellspacing="0" style="border:0; margin: 0 auto;" class="tc">
+        <input type="hidden" name="ban_id" value="{$info.ban_id}">
+        <tr>
+            <td width="80" align="right">标题&提示：</td>
+            <td class="tdright">
+                <input type="text" name="ban_title" placeholder="请输入标题&提示" value="{$info.ban_title}">
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">指向地址：</td>
+            <td class="tdright">
+                <input type="text" name="ban_url" placeholder="请输入指向地址" value="{$info.ban_url}">
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">排序：</td>
+            <td class="tdright">
+                <input type="text" name="ban_sort" value="{$info.ban_sort}">
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">是否显示：</td>
+            <td class="tdright">
+                <div class="radio">
+                    <input type="radio" name="ban_view" id="radio_1" value="1" {eq name="info.ban_view" value="1"}checked{/eq} /><label for="radio_1">显示</label>&nbsp;
+                    <input type="radio" name="ban_view" id="radio_2" value="0" {eq name="info.ban_view" value="0"}checked{/eq} /><label for="radio_2">不显示</label>&nbsp;
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">原图片：</td>
+            <td class="tdright">
+                <img src='{$info.ban_img}' width='200' style="margin: 10px 0;">
+                <input name='ban_old_img' value='{$info.ban_img}' type='hidden'>
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">图片：</td>
+            <td class="tdright">
+                <div id="uploader-demo">
+                    <div id="filePicker">选择图片</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><span style="color: #666">上传文件尺寸为: 1250 x 275</span></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="enter">
+                <button class="btn editsave" type="button">修改</button>
+                <button class="btn" type="reset">重置</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script src="admin_upload/webuploader.js"></script>
+<link rel="stylesheet" href="admin_upload/webuploader.css"/>
+
+<script>
+    var uploader = WebUploader.create({
+        auto: true,
+        swf: 'admin_upload/Uploader.swf',
+        server: "{:url('Admin/Banner/upload')}",
+        fileNumLimit:1,
+        fileSingleSizeLimit : 1024*1024,
+        pick: '#filePicker',
+        fileVal:'image',
+        accept: {
+            title: 'Images',
+            extensions: 'jpg,jpeg,bmp,png',
+            mimeTypes: 'image/jpg,image/jpeg,image/png'
+        }
+    });
+    uploader.on('uploadSuccess', function (file, data) {
+        if( data.err == 0 ){
+            _this = $('#filePicker');
+            _this.parent().after("<img src='/uploads/banner/"+data.data+"' width='100'>");
+            _this.parent().after("<input name='ban_new_img' value='/uploads/banner/"+data.url+"' type='hidden'>");
+            _this.parent().remove();
+            layer.msg(data.msg, {icon: 6,time:500});
+        }else{
+            layer.msg(data.msg, {icon: 5,time:500});
+        }
+    });
+    uploader.on("error", function (type) {
+        if (type == "Q_TYPE_DENIED") {
+            layer.msg('请选择图片格式的文件!', {icon: 5,time:500});
+        } else if (type == "F_EXCEED_SIZE") {
+            layer.msg('文件大小不能超过1MB!', {icon: 5,time:500});
+        }
+    });
+    uploader.on('uploadError', function (file) {
+        layer.msg('上传失败!', {icon: 5,time:500});
+    });
+</script>
+{/block}

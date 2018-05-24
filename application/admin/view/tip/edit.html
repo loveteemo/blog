@@ -1,0 +1,36 @@
+{extend name="layout_iframe"}
+{block name="content"}
+<form action="{:url('Admin/Tip/edit')}">
+    <table cellpadding="0" cellspacing="0" style="border:0; margin: 0 auto;" class="tc">
+        <input type="hidden" name="tip_id" value="{$info.tip_id}">
+        <tr>
+            <td width="80" align="right">文本：</td>
+            <td class="tdright">
+                <input type="text" name="tip_title" placeholder="请输入文本" value="{$info.tip_title}">
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">是否显示：</td>
+            <td class="tdright">
+
+                <div class="radio">
+                    <input type="radio" name="tip_view" id="radio_1" value="1" {eq name="info['tip_view']" value="1"} checked {/eq} /><label for="radio_1">显示</label>&nbsp;
+                    <input type="radio" name="tip_view" id="radio_2" value="0" {eq name="info['tip_view']" value="0"} checked {/eq} /><label for="radio_2">不显示</label>&nbsp;
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="80" align="right">排序：</td>
+            <td class="tdright">
+                <input type="text" name="tip_sort" value="{$info.tip_sort}">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="enter">
+                <button class="btn editsave" type="button">修改</button>
+                <button class="btn" type="reset">重置</button>
+            </td>
+        </tr>
+    </table>
+</form>
+{/block}

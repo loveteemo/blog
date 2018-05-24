@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Json格式化 - 工具箱 - {$systeminfo.sys_title}</title>
+    <meta name="keywords" content="{$systeminfo.sys_keyword}" />
+    <meta name="description" content="{$systeminfo.sys_remark}" />
+    <meta name="version" content="v {$systeminfo.sys_version}" />
+    <meta name="author" content="{$Think.config.auth.author}"/>
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if lt IE 9]>
+    <script>window.location.href= "{:url('base/ieerror')}";</script>
+    <![endif]-->
+    <link rel="stylesheet" href="home_css/bootstrap.css?v={$systeminfo.sys_version}" />
+    <link rel="stylesheet" href="home_css/my.css?v={$systeminfo.sys_version}" />
+</head>
+<body>
+<style>
+    div.Canvas{border:solid 1px #CECECE;background-color:#ECECEC;color:#000;font-size:13px;margin-top: 20px;}
+    .ObjectBrace{color:#0A0;font-weight:700}
+    .ArrayBrace{color:#03F;font-weight:700}
+    .PropertyName{color:#C00;font-weight:700}
+    .String{color:#077}
+    .Number{color:#A0A}
+    .Boolean{color:#00F}
+    .Function{color:#A63;font-style:italic;}
+    .Null{color:#00F}
+    .Comma{color:#000;font-weight:700}
+    PRE.CodeContainer{margin-top:0;margin-bottom:0}
+    PRE.CodeContainer img{margin-bottom:-1px;border:none;cursor:pointer}
+</style>
+    <div class="tool_nav container">
+        <p class="tooltitle"><a class="btn-xs btn-danger toolback" href="{:url('tool/index')}">返回工具</a>JSON格式化及高亮</p>
+        <p>测试数据：<span class="tooltmp">{"data":1,"err":{"data":2,"err":{"data":3,"msg":"我是三级"},"msg":"我是二级"},"msg":"我是一级"}</span></p>
+        <textarea class="form-control" rows="10" id="RawJson"></textarea>
+        <div class="form-inline">
+            <button class="btn btn-success" onclick="Process()">格式化</button>
+            缩进量
+            <select id="TabSize" class="form-control" onchange="TabSizeChanged()">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="QuoteKeys" onclick="QuoteKeysClicked()" checked="checked" > 引号
+            </label>
+            <a href="javascript:void(0);" onclick="SelectAllClicked()">全选</a>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="CollapsibleView" onclick="CollapsibleViewClicked()" checked="checked" > 显示控制
+            </label>
+            <span id="CollapsibleViewDetail">
+                <a href="javascript:void(0);" onclick="ExpandAllClicked()">展开</a>
+                <a href="javascript:void(0);" onclick="CollapseAllClicked()">叠起</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(3)">2级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(4)">3级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(5)">4级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(6)">5级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(7)">6级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(8)">7级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(9)">8级</a>
+            </span>
+        </div>
+
+        <div id="Canvas" class="Canvas"></div>
+    </div>
+<script type="text/javascript" src="tool_js/json.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>
