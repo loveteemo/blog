@@ -171,6 +171,10 @@ article h5 .reprint{display:inline-block;vertical-align:bottom;font-size:14px;co
 .articleinfo h3{text-align:center;margin-bottom:25px;padding-top:5px}
 .articleinfo-write{width:100%;height:30px;font-size:12px;border-bottom:1px solid #ccc;line-height:20px;color:#999;padding:5px}
 .articleinfo-content{margin-top:20px;padding:10px;color:#666}
+.articleinfo-content table{border: none;border-collapse: collapse;}
+.articleinfo-content table tbody{display: table-row-group;vertical-align: middle;border-color: inherit;}
+.articleinfo-content table tbody tr{display: table-row;vertical-align: inherit;border-color: inherit;}
+.articleinfo-content table tbody tr td{border: 1px solid #999;padding: 3px 5px;min-width: 50px;height: 20px;}
 .articleinfo-up{margin-top:20px;padding-left:20px}
 .articleinfo-down{padding-left:20px}
 .articleinfo-fenxiang{height:50px;float:right}
@@ -236,6 +240,8 @@ article h5 .reprint{display:inline-block;vertical-align:bottom;font-size:14px;co
 .tool_nav>textarea{width:100%;margin-bottom: 10px;}
 .tool_nav>button{margin-bottom: 10px}
 .tool_msg{text-align: center;  margin-top: 50px;}
+
+.
 
 
 
