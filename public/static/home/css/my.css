@@ -228,7 +228,7 @@ article h5 .reprint{display:inline-block;vertical-align:bottom;font-size:14px;co
 .qqnick{display: block;margin: 10px;}
 .qqnick i{margin-right: 10px;}
 .wangEditor-container{margin-bottom: 10px !important;}
-.inc-sum{width: 100px;}
+.inc-sum{width: 100px;background: #5CB85C;color: #fff;}
 .dropdown-menu > li > a {padding: 10px 20px !important;}
 .dropdown-menu .divider{margin: 0 !important;}
 .empty{width: 100%;height: 30px;}

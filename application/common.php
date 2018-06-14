@@ -60,8 +60,8 @@ function getAjaxHtml($arr,$type,$html = '')
             foreach ($arr as $key => $value) {
                 $a = ($value['art_original'] == 1) ? '<span class="original">[ 原创 ]</span>' : '<span class="reprint">[ 转载 ]</span>';
                 $url = url('Article/index', ['id' => $value['art_id']]);
-                $html .= '<article><h5>' . $a . '<a href="' . $url . '">' . $value['art_title'] . '</a></h5><div class="clearfix" ><p class="article-remark">';
-                $html .= '<a class="article-img-a image-light" href="' . $url . '"><img src="' . $value['art_img'] . '" class="article-img" alt="' . $value['art_title'] . '" title="' . $value['art_title'] . '" /></a>';
+                $html .= '<article><h5>' . $a . '<a href="' . $url . '" target="_blank">' . $value['art_title'] . '</a></h5><div class="clearfix" ><p class="article-remark">';
+                $html .= '<a class="article-img-a image-light" href="' . $url . '" target="_blank"><img src="' . $value['art_img'] . '" class="article-img" alt="' . $value['art_title'] . '" title="' . $value['art_title'] . '" /></a>';
                 $html .= $value['art_remark'] . '<a href="' . $url . '" class="article-look">继续阅读</a></p>';
                 $html .= '<footer class="article-footer"><div class="article-footer-l"><i class="iconfont icon-tags"></i>' . getKeyword($value['art_keyword']) . '</div>';
                 $html .= '<div class="article-footer-r"><i class="iconfont icon-hit"></i>' . $value['art_hit'] . '&nbsp;<i class="iconfont icon-review"></i>&nbsp;' . getNums($value['nums']) . '</div></footer></div></article>';

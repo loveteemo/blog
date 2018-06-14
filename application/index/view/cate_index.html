@@ -15,15 +15,15 @@
             {else /}
             <span class="reprint">[ 转载 ]</span>
             {/eq}
-            <a href="{:url('Article/index',['id'=>$Cateart['art_id']])}">{$Cateart.art_title}</a>
+            <a href="{:url('Article/index',['id'=>$Cateart['art_id']])}" target="_blank">{$Cateart.art_title}</a>
         </h5>
         <div class="clearfix" >
             <p class="article-remark">
-                <a class="article-img-a image-light" href="{:url('Article/index',['id'=>$Cateart['art_id']])}">
+                <a class="article-img-a image-light" href="{:url('Article/index',['id'=>$Cateart['art_id']])}" target="_blank">
                     <img src="{$Cateart.art_img}" class="article-img" alt="{$Cateart.art_title}" title="{$Cateart.art_title}" />
                 </a>
                 {$Cateart.art_remark}
-                <a href="{:url('Article/index',['id'=>$Cateart['art_id']])}" class="article-look">继续阅读</a>
+                <a href="{:url('Article/index',['id'=>$Cateart['art_id']])}" class="article-look" target="_blank">继续阅读</a>
             </p>
             <footer class="article-footer">
                 <div class="article-footer-l">

@@ -23,7 +23,7 @@
                 {else /}
                 <span class="reprint">[ 转载 ]</span>
                 {/eq}
-                <a href="{:url('Article/index',['id'=>$indexart['art_id']])}">{$indexart.art_title}</a>
+                <a href="{:url('Article/index',['id'=>$indexart['art_id']])}" target="_blank">{$indexart.art_title}</a>
             </h5>
             <div class="clearfix" >
                 <div class="article-remark">
@@ -38,7 +38,7 @@
                         <!--<img src="home_img/{$indexart.art_img}" class="article-img" alt="{$indexart.art_title}" title="{$indexart.art_title}" />-->
                     <!--</a>-->
                     {$indexart.art_remark}
-                    <a href="{:url('Article/index',['id'=>$indexart['art_id']])}" class="article-look">继续阅读</a>
+                    <a href="{:url('Article/index',['id'=>$indexart['art_id']])}" class="article-look" target="_blank">继续阅读</a>
                 </div>
                 <footer class="article-footer">
                     <div class="article-footer-l">
