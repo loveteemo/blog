@@ -10,6 +10,7 @@
 // +----------------------------------------------------------------------
 namespace app\index\controller;
 
+use app\index\logic\Log as LogLogic;
 use app\index\model\Article as ArticleModel;
 use app\index\model\ArticleComment as ArticleCommentModel;
 use app\index\model\Banner as BannerModel;
@@ -37,6 +38,7 @@ class Base extends Controller
         $SystemModel   			= new SystemModel();
         $LinkModel				= new LinkModel();
         $ArticleLogic 			= new ArticleLogic();
+        $LogLogic               = new LogLogic();
 
         // 导航菜单
         if( empty( $menuinfo = cache('menuinfo') ) ){
@@ -47,6 +49,9 @@ class Base extends Controller
 
         // 系统访问量
 		$SystemModel->where('sys_id',1)->setInc('sys_hits');
+
+		// 访问记录
+        $LogLogic->access_log();
 
         // 系统参数
         if( empty( $systeminfo = cache('systeminfo') ) ){

@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="home_css/bootstrap.css?v={$systeminfo.sys_version}" />
     <link rel="stylesheet" href="home_css/my.css?v={$systeminfo.sys_version}" />
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1477105914_3430886.css">
+    <link rel="stylesheet" href="/dist/css/layui.css">
 
     <script src="home_js/jquery-1.10.1.min.js" ></script>
+    <script src="/dist/layui.js" ></script>
 </head>
 <body>
 <!--顶部开始-->
@@ -33,6 +35,7 @@
         </div>
     </div>
 </div>
+<div class="chat-token" data-value="{$Think.session.qq.openid}" style="display: none"></div>
 <!--顶部结束-->
 
 <div class="container">

@@ -9,6 +9,74 @@
 // | Author: long <admin@loveteemo.com>
 // +----------------------------------------------------------------------
 
+// 获取浏览器
+function get_user_browser($user_agent){
+    if(empty($user_agent)){
+        return 'robot！';
+    }
+    if( (false == strpos($user_agent,'MSIE')) && (strpos($user_agent, 'Trident') !== false) ){
+        return 'Internet Explorer 11.0';
+    }
+    if(false!==strpos($user_agent,'MSIE 10.0')){
+        return 'Internet Explorer 10.0';
+    }
+    if(false!==strpos($user_agent,'MSIE 9.0')){
+        return 'Internet Explorer 9.0';
+    }
+    if(false!==strpos($user_agent,'MSIE 8.0')){
+        return 'Internet Explorer 8.0';
+    }
+    if(false!==strpos($user_agent,'MSIE 7.0')){
+        return 'Internet Explorer 7.0';
+    }
+    if(false!==strpos($user_agent,'MSIE 6.0')){
+        return 'Internet Explorer 6.0';
+    }
+    if(false!==strpos($user_agent,'Edge')){
+        return 'Edge';
+    }
+    if(false!==strpos($user_agent,'Firefox')){
+        return 'Firefox';
+    }
+    if(false!==strpos($user_agent,'Chrome')){
+        return 'Chrome';
+    }
+    if(false!==strpos($user_agent,'Safari')){
+        return 'Safari';
+    }
+    if(false!==strpos($user_agent,'Opera')){
+        return 'Opera';
+    }
+    if(false!==strpos($user_agent,'360SE')){
+        return '360SE';
+    }
+    //微信浏览器
+    if(false!==strpos($user_agent,'MicroMessage')){
+        return 'MicroMessage';
+    }
+    //百度蜘蛛
+    if(false !== strpos($user_agent,'Baiduspider')){
+        return 'BaiDu Spider';
+    }
+    //宜搜蜘蛛
+    if(false !== strpos($user_agent,'YisouSpider')){
+        return 'Yisou Spider';
+    }
+    //谷歌蜘蛛
+    if(false !== strpos($user_agent,'Googlebot')){
+        return 'Google Spider';
+    }
+    //必应蜘蛛
+    if(false !== strpos($user_agent,'bingbot')){
+        return 'Bing Spider';
+    }
+    //其他蜘蛛
+    if(false !== strpos($user_agent,'Spider')){
+        return 'Other Spider';
+    }
+    return 'Other';
+}
+
 /**
  * 评论的时候去掉 img 和 a 以外的标签
  * @param $str
@@ -305,7 +373,7 @@ function getCity($address){
  */
 function getOs( $os='' )
 {
-    $Agent = $_SERVER['HTTP_USER_AGENT'];
+    $Agent = request()->header('user-agent');
     if (preg_match('/Win/', $Agent) && preg_match('/NT 5.0/', $Agent)) {
         $os = 'Win 2000';
     } elseif (preg_match('/Win/', $Agent) && preg_match('/NT 6.1/', $Agent)) {

@@ -34,4 +34,26 @@ class Member extends Model
 		$res = $this->allowField(true)->isUpdate(true)->save($data);
 		return $res;
 	}
+
+	public function getOnline($type = 1)
+    {
+        if($type == 1){
+            $res = $this->field('mem_name as username,mem_id as id,mem_sign as sign,mem_img as avatar,mem_online')
+                //->where('mem_online',1)
+                ->where('mem_id','<>',session('qq.mem_id'))
+                ->order('mem_logintime','desc')
+                ->select();
+            if(!empty($res) && is_array($res)){
+                foreach ($res as $key => &$value){
+                    $value['status'] = ($value['mem_online'] == 1) ? 'online' : 'offline';
+                }
+            }
+        }else{
+            $res = $this->field('mem_name as username,mem_id as id,mem_sign as sign,mem_img as avatar')
+                ->where('mem_online',1)
+                ->order('mem_logintime','desc')
+                ->select();
+        }
+        return $res;
+    }
 }

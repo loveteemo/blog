@@ -15,7 +15,7 @@ return [
 	// +----------------------------------------------------------------------
 	'qqgroup'		=>	'455466010',
 	'qqjoin'		=>	'http://jq.qq.com/?_wv=1027&k=dSjBgy',
-	'baiduurl'		=>	'http://koubei.baidu.com/w/loveteemo.com',
+	'baiduurl'		=>	'http://loveteemo.com',
 	'githuburl'		=>	'https://github.com/loveteemo',
 	'weibourl'		=>	'http://weibo.com/iteemo',
 	'blogname'		=>	'青春博客',
