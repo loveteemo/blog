@@ -1,7 +1,5 @@
-.idea
-composer.lock
+/.idea
+/.vscode
+/vendor
 *.log
-runtime
-public/uploads
-doc
-config/database.php
+.env
