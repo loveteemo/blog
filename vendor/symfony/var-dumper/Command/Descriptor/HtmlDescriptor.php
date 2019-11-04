@@ -35,8 +35,8 @@ class HtmlDescriptor implements DumpDescriptorInterface
     public function describe(OutputInterface $output, Data $data, array $context, int $clientId): void
     {
         if (!$this->initialized) {
-            $styles = file_get_contents(__DIR__ . '/../../Resources/css/htmlDescriptor.css');
-            $scripts = file_get_contents(__DIR__ . '/../../Resources/js/htmlDescriptor.js');
+            $styles = file_get_contents(__DIR__.'/../../Resources/css/htmlDescriptor.css');
+            $scripts = file_get_contents(__DIR__.'/../../Resources/js/htmlDescriptor.js');
             $output->writeln("<style>$styles</style><script>$scripts</script>");
             $this->initialized = true;
         }

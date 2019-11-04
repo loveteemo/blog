@@ -161,7 +161,7 @@ EODUMP;
      */
     public function testFrameWithTwig()
     {
-        require_once \dirname(__DIR__) . '/Fixtures/Twig.php';
+        require_once \dirname(__DIR__).'/Fixtures/Twig.php';
 
         $f = [
             new FrameStub([

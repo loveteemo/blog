@@ -27,7 +27,7 @@ class CliDumperTest extends TestCase
 
     public function testGet()
     {
-        require __DIR__ . '/../Fixtures/dumb-var.php';
+        require __DIR__.'/../Fixtures/dumb-var.php';
 
         $dumper = new CliDumper('php://output');
         $dumper->setColors(false);
@@ -347,7 +347,7 @@ EOTXT
     {
         $out = fopen('php://memory', 'r+b');
 
-        require_once __DIR__ . '/../Fixtures/Twig.php';
+        require_once __DIR__.'/../Fixtures/Twig.php';
         $twig = new \__TwigTemplate_VarDumperFixture_u75a09(new Environment(new FilesystemLoader()));
 
         $dumper = new CliDumper();

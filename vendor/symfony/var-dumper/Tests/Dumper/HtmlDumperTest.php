@@ -26,7 +26,7 @@ class HtmlDumperTest extends TestCase
             $this->markTestSkipped('A custom file_link_format is defined.');
         }
 
-        require __DIR__ . '/../Fixtures/dumb-var.php';
+        require __DIR__.'/../Fixtures/dumb-var.php';
 
         $dumper = new HtmlDumper('php://output');
         $dumper->setDumpHeader('<foo></foo>');
